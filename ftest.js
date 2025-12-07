@@ -9,5 +9,6 @@ export const options = {
 export default function () {
   const res = http.get('https://test.k6.io');
   sleep(1);  // use to wait between requests 1 second
+  
  
 }
