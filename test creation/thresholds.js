@@ -10,7 +10,7 @@ export const options = {
     thresholds: {
         'http_req_duration': ['p(95)<500'], // 95% of requests must complete below 500ms
         'checks': ['rate>0.95'], // 95% of checks must pass
-        vus: [value <=16], // ensure we never exceed 16 VUs
+        'vus': ['value <=16'], // ensure we never exceed 16 VUs
     },
      
 };  
@@ -26,6 +26,5 @@ export default function () {
       //  'page is startpage': (r) => r.body.includes('Collection of simple web-pages')
         
     });
+}                   
 
-    
-}
