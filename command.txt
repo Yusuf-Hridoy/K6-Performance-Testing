@@ -1,1 +1,6 @@
 k6 run (file name)
+
+k6 run --http-debug (file name ) // use it to debug http requests
+
+k6 run --http-debug"full" (file name ) // use it to debug http requests with body
+
