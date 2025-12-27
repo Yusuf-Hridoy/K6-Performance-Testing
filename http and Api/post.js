@@ -23,9 +23,8 @@ export default function () {
   console.log(res.headers);
   check(res, {
     'status code  is 200': (res) => res.status === 200,
-    
 
-
+   
     
   });
   ;
