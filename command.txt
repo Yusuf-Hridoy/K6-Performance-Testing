@@ -5,3 +5,7 @@ k6 run --http-debug (file name ) // use it to debug http requests
 k6 run --http-debug"full" (file name ) // use it to debug http requests with body
 
 cloud login command in k6 ( k6 cloud login --token (token) ,  )
+
+k6 cloud (file name) // use it to run test on k6 cloud
+
+run locally but can take to cloud (k6 run file name -o cloud (file name)) 
