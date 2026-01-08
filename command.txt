@@ -9,3 +9,5 @@ cloud login command in k6 ( k6 cloud login --token (token) ,  )
 k6 cloud (file name) // use it to run test on k6 cloud
 
 run locally but can take to cloud (k6 run file name -o cloud (file name)) 
+
+allow k6 to run insecure requests (k6 run --insecure-tls (file name))
