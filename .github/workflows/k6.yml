@@ -1,0 +1,27 @@
+name: k6 Load Test
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+
+jobs:
+  k6_test:
+    name: Run k6 Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Smoke Test
+        uses: grafana/k6-action@v0.3.1
+        with:
+          filename: smoke.js
+          flags: --vus 1 --duration 10s
+
+      - name: Run Thresholds Test
+        uses: grafana/k6-action@v0.3.1
+        with:
+          filename: test creation/thresholds.js
