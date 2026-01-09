@@ -106,16 +106,7 @@ This project is configured with a robust CI/CD pipeline using **GitHub Actions**
 -   **Configuration File**: `.github/workflows/k6.yml`
 -   **Trigger**: Automatically runs on every `push` or `pull_request` to the `main` or `master` branches.
 
-### Workflow Details
-The pipeline has two main phases:
 
-1.  **Smoke Test**: 
-    -   Runs `smoke.js` with 1 VU for 10s.
-    -   **Purpose**: Fast feedback loop to ensure the app isn't completely down.
-
-2.  **Threshold Check**:
-    -   Runs `test_creation/thresholds.js`.
-    -   **Purpose**: Verifies that performance metrics (latency, error rate) meet the defined criteria. If this step fails, the deployment/PR is marked as failed.
 
 ---
 
@@ -130,4 +121,3 @@ When k6 finishes, it provides a summary of metrics. Key metrics to watch:
 
 ---
 
-*"Performance is not a feature, it's a requirement."*
